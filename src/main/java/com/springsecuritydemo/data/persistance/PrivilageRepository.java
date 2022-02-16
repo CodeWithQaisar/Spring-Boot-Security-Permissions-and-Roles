@@ -1,6 +1,6 @@
-package com.springsecuritydemo.repositories;
+package com.springsecuritydemo.data.persistance;
 
-import com.springsecuritydemo.models.Privilege;
+import com.springsecuritydemo.data.entities.Privilege;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

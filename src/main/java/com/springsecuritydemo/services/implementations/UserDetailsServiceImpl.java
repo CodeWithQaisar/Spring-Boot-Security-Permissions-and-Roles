@@ -1,8 +1,8 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.services.implementations;
 
 
-import com.springsecuritydemo.models.User;
-import com.springsecuritydemo.repositories.UserRepository;
+import com.springsecuritydemo.data.entities.User;
+import com.springsecuritydemo.data.persistance.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private com.springsecuritydemo.repositories.UserRepository UserRepository;
+    private com.springsecuritydemo.data.persistance.UserRepository UserRepository;
 
     public UserDetailsServiceImpl(UserRepository UserRepository) {
         this.UserRepository = UserRepository;

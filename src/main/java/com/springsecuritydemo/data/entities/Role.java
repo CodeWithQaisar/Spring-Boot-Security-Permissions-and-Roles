@@ -1,4 +1,4 @@
-package com.springsecuritydemo.models;
+package com.springsecuritydemo.data.entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;

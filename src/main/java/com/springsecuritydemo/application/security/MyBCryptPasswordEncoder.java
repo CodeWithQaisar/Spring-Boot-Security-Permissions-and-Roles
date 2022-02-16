@@ -1,4 +1,4 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;

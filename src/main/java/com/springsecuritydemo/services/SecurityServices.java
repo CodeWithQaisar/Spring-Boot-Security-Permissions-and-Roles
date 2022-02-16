@@ -1,12 +1,12 @@
 package com.springsecuritydemo.services;
 
-import com.springsecuritydemo.config.security.MyBCryptPasswordEncoder;
-import com.springsecuritydemo.models.Privilege;
-import com.springsecuritydemo.models.Role;
-import com.springsecuritydemo.models.User;
-import com.springsecuritydemo.repositories.PrivilageRepository;
-import com.springsecuritydemo.repositories.RoleRepository;
-import com.springsecuritydemo.repositories.UserRepository;
+import com.springsecuritydemo.application.security.MyBCryptPasswordEncoder;
+import com.springsecuritydemo.data.entities.Privilege;
+import com.springsecuritydemo.data.entities.Role;
+import com.springsecuritydemo.data.entities.User;
+import com.springsecuritydemo.data.persistance.PrivilageRepository;
+import com.springsecuritydemo.data.persistance.RoleRepository;
+import com.springsecuritydemo.data.persistance.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

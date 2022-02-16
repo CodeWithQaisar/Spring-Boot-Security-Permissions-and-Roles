@@ -1,7 +1,6 @@
-package com.springsecuritydemo.models;
+package com.springsecuritydemo.domain.response;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 public class AuthResponse implements Serializable {
     private String token;

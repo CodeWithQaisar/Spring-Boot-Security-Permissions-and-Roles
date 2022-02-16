@@ -1,4 +1,4 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.constants;
 
 public class SecurityConstants {
     public static final String TOKEN_PREFIX = "Bearer ";

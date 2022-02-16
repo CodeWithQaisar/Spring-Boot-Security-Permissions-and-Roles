@@ -1,10 +1,12 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.filters;
 
 import com.auth0.jwt.exceptions.AlgorithmMismatchException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.springsecuritydemo.models.Privilege;
+import com.springsecuritydemo.application.constants.SecurityConstants;
+import com.springsecuritydemo.application.utility.JwtOutils;
+import com.springsecuritydemo.data.entities.Privilege;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

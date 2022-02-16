@@ -1,5 +1,11 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.config;
 
+import com.springsecuritydemo.application.filters.JWTAuthenticationFilter;
+import com.springsecuritydemo.application.filters.JWTAuthorizationFilter;
+import com.springsecuritydemo.application.security.JwtAuthenticationEntryPoint;
+import com.springsecuritydemo.application.security.MyBCryptPasswordEncoder;
+import com.springsecuritydemo.services.implementations.UserDetailsServiceImpl;
+import com.springsecuritydemo.application.utility.JwtOutils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,16 +18,16 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
-public class WebSecurity extends WebSecurityConfigurerAdapter {
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private UserDetailsServiceImpl userDetailsService;
     private MyBCryptPasswordEncoder myBCryptPasswordEncoder;
     private final JwtOutils jwtOutils;
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
-    public WebSecurity(UserDetailsServiceImpl userDetailsService, MyBCryptPasswordEncoder myBCryptPasswordEncoder, JwtOutils jwtOutils, JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint) {
+    public WebSecurityConfig(UserDetailsServiceImpl userDetailsService, MyBCryptPasswordEncoder myBCryptPasswordEncoder, JwtOutils jwtOutils, JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint) {
         this.userDetailsService = userDetailsService;
         this.myBCryptPasswordEncoder = myBCryptPasswordEncoder;
         this.jwtOutils = jwtOutils;
@@ -47,7 +53,6 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
-
 
     @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {

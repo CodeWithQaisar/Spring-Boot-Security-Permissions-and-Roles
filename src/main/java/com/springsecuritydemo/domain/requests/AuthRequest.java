@@ -1,4 +1,4 @@
-package com.springsecuritydemo.models;
+package com.springsecuritydemo.domain.requests;
 
 import lombok.Getter;
 import lombok.Setter;

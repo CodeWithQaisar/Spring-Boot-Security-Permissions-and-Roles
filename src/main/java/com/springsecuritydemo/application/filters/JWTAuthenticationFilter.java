@@ -1,9 +1,9 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.filters;
 
-import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.springsecuritydemo.models.AuthResponse;
-import com.springsecuritydemo.models.User;
+import com.springsecuritydemo.application.utility.JwtOutils;
+import com.springsecuritydemo.domain.response.AuthResponse;
+import com.springsecuritydemo.data.entities.User;
 import org.springframework.http.*;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

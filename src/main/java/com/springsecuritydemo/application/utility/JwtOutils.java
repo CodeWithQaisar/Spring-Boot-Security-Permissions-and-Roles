@@ -1,18 +1,18 @@
-package com.springsecuritydemo.config.security;
+package com.springsecuritydemo.application.utility;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
-import com.springsecuritydemo.models.Privilege;
-import com.springsecuritydemo.models.User;
+import com.springsecuritydemo.application.constants.SecurityConstants;
+import com.springsecuritydemo.data.entities.Privilege;
+import com.springsecuritydemo.data.entities.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.stream.Collectors;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
